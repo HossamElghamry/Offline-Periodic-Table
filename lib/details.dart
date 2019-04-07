@@ -20,7 +20,7 @@ class Details extends StatelessWidget {
   Widget _buildInfo2(context) {
     return Container(
       child: Padding(
-        padding: EdgeInsets.only(top: 5),
+        padding: EdgeInsets.only(top: 15),
         child: Column(
           children: <Widget>[
             Row(
@@ -29,11 +29,11 @@ class Details extends StatelessWidget {
                 Container(
                     child: Center(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                         elementDetails.massNum.toString(),
-                        style: TextStyle(fontSize: 65),
+                        style: TextStyle(fontSize: 45),
                       ),
                       Text(
                         "Mass\nNumber",
@@ -50,7 +50,7 @@ class Details extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         elementDetails.atomicNum.toString(),
-                        style: TextStyle(fontSize: 65),
+                        style: TextStyle(fontSize: 45),
                       ),
                       Text(
                         "Atomic\nNumber",
@@ -65,15 +65,26 @@ class Details extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      Text(
-                        elementDetails.atomicNum.toString(),
-                        style: TextStyle(fontSize: 65),
-                      ),
-                      Text(
-                        "Atomic\nNumber",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 13),
-                      )
+                      elementDetails.density < 0.01
+                          ? Text(
+                              (elementDetails.density * 100).toString(),
+                              style: TextStyle(fontSize: 45),
+                            )
+                          : Text(
+                              elementDetails.density.toString(),
+                              style: TextStyle(fontSize: 45),
+                            ),
+                      elementDetails.density < 0.01
+                          ? Text(
+                              "Density\n(g per cm)*100",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 13),
+                            )
+                          : Text(
+                              "Density\n(g per cm)",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(fontSize: 13),
+                            )
                     ],
                   ),
                 ))
@@ -91,25 +102,8 @@ class Details extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text(
-                        elementDetails.massNum.toString(),
-                        style: TextStyle(fontSize: 65),
-                      ),
-                      Text(
-                        "Mass\nNumber",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 13),
-                      )
-                    ],
-                  ),
-                )),
-                Container(
-                    child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(
                         elementDetails.atomicNum.toString(),
-                        style: TextStyle(fontSize: 65),
+                        style: TextStyle(fontSize: 45),
                       ),
                       Text(
                         "Atomic\nNumber",
@@ -126,7 +120,7 @@ class Details extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         elementDetails.atomicNum.toString(),
-                        style: TextStyle(fontSize: 65),
+                        style: TextStyle(fontSize: 45),
                       ),
                       Text(
                         "Atomic\nNumber",
@@ -135,7 +129,24 @@ class Details extends StatelessWidget {
                       )
                     ],
                   ),
-                ))
+                )),
+                Container(
+                    child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Text(
+                        elementDetails.energy.toString(),
+                        style: TextStyle(fontSize: 45),
+                      ),
+                      Text(
+                        "Ionization Energy\n(kJ per mol)",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 13),
+                      )
+                    ],
+                  ),
+                )),
               ],
             ),
           ],
@@ -148,7 +159,7 @@ class Details extends StatelessWidget {
     return ClipPath(
       clipper: BottomWaveClipper(),
       child: Container(
-        height: MediaQuery.of(context).size.height / 2.2,
+        height: MediaQuery.of(context).size.height / 2.6,
         color: Colors.white,
         child: Padding(
           padding: EdgeInsets.all(15.0),
