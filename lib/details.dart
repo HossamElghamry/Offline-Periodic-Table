@@ -17,6 +17,51 @@ class Details extends StatelessWidget {
         ));
   }
 
+  Widget _buildDensity(value) {
+    if (value == null) {
+      return Text(
+        ("Unknown").toString(),
+        style: TextStyle(fontSize: 25),
+      );
+    } else {
+      if (elementDetails.density < 0.01) {
+        return Text(
+          (elementDetails.density * 100).toString(),
+          style: TextStyle(fontSize: 45),
+        );
+      } else {
+        return Text(
+          elementDetails.density.toString(),
+          style: TextStyle(fontSize: 45),
+        );
+      }
+    }
+  }
+
+  Widget _buildDenText(value) {
+    if (value == null) {
+      return Text(
+        "Density",
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 13),
+      );
+    } else {
+      if (elementDetails.density < 0.01) {
+        return Text(
+          "Density\n(g per cm)*100",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 13),
+        );
+      } else {
+        return Text(
+          "Density\n(g per cm)",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 13),
+        );
+      }
+    }
+  }
+
   Widget _buildInfo2(context) {
     return Container(
       child: Padding(
@@ -65,26 +110,8 @@ class Details extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
-                      elementDetails.density < 0.01
-                          ? Text(
-                              (elementDetails.density * 100).toString(),
-                              style: TextStyle(fontSize: 45),
-                            )
-                          : Text(
-                              elementDetails.density.toString(),
-                              style: TextStyle(fontSize: 45),
-                            ),
-                      elementDetails.density < 0.01
-                          ? Text(
-                              "Density\n(g per cm)*100",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 13),
-                            )
-                          : Text(
-                              "Density\n(g per cm)",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(fontSize: 13),
-                            )
+                      _buildDensity(elementDetails.density),
+                      _buildDenText(elementDetails.density),
                     ],
                   ),
                 ))
@@ -102,11 +129,11 @@ class Details extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text(
-                        elementDetails.atomicNum.toString(),
-                        style: TextStyle(fontSize: 45),
+                        elementDetails.melting.toString(),
+                        style: TextStyle(fontSize: 35),
                       ),
                       Text(
-                        "Atomic\nNumber",
+                        "Melting\nPoint (K)",
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 13),
                       )
@@ -119,11 +146,11 @@ class Details extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Text(
-                        elementDetails.atomicNum.toString(),
-                        style: TextStyle(fontSize: 45),
+                        elementDetails.boiling.toString(),
+                        style: TextStyle(fontSize: 35),
                       ),
                       Text(
-                        "Atomic\nNumber",
+                        "Boiling\nPoint (K)",
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 13),
                       )
@@ -137,7 +164,7 @@ class Details extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         elementDetails.energy.toString(),
-                        style: TextStyle(fontSize: 45),
+                        style: TextStyle(fontSize: 35),
                       ),
                       Text(
                         "Ionization Energy\n(kJ per mol)",
@@ -149,6 +176,24 @@ class Details extends StatelessWidget {
                 )),
               ],
             ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.15,
+            ),
+            Container(
+              child: Center(
+                child: Padding(
+                  padding: EdgeInsets.all(12.0),
+                  child: Text(
+                    elementDetails.appearance,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
