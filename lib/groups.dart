@@ -84,7 +84,7 @@ final List<TableElement> groupOne = [
 ];
 
 // TableElement(String symbol, String name, int atomicNum, int atomicMass,
-//               Color(0xFF/FBC9E5), double density, double ionizationenergy, int melting,
+//               Color(0xFFFBC9E5), double density, double ionizationenergy, int melting,
 //               int boiling, String appearance)
 
 final List<TableElement> groupTwo = [
