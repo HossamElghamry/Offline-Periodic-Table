@@ -6,7 +6,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 12,
+      length: 18,
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -16,40 +16,58 @@ class Home extends StatelessWidget {
             isScrollable: true,
             tabs: [
               Tab(
-                text: "Group 1",
+                text: "G1 Alkali Metals",
               ),
               Tab(
-                text: "Group 2",
+                text: "G2 Alkali Earth Metals",
               ),
               Tab(
-                text: "Group 3",
+                text: "G3",
               ),
               Tab(
-                text: "Group 4",
+                text: "G4",
               ),
               Tab(
-                text: "Group 5",
+                text: "G5",
               ),
               Tab(
-                text: "Group 6",
+                text: "G6",
               ),
               Tab(
-                text: "Group 7",
+                text: "G7",
               ),
               Tab(
-                text: "Group 8",
+                text: "G8",
               ),
               Tab(
-                text: "Group 9",
+                text: "G9",
               ),
               Tab(
-                text: "Group 10",
+                text: "G10",
               ),
               Tab(
-                text: "Group 11",
+                text: "G11 Coinage Metals",
               ),
               Tab(
-                text: "Group 12",
+                text: "G12",
+              ),
+              Tab(
+                text: "G13 Triels",
+              ),
+              Tab(
+                text: "G14 Tetrels",
+              ),
+              Tab(
+                text: "G15",
+              ),
+              Tab(
+                text: "G16 Chalcogens",
+              ),
+              Tab(
+                text: "G17 Halogens",
+              ),
+              Tab(
+                text: "G18 Noble Gases",
               ),
             ],
           ),
@@ -73,34 +91,52 @@ class Home extends StatelessWidget {
               elements: groupTwo,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group11,
             ),
             ElementGroup(
-              elements: groupOne,
+              elements: group12,
+            ),
+            ElementGroup(
+              elements: group13,
+            ),
+            ElementGroup(
+              elements: group14,
+            ),
+            ElementGroup(
+              elements: group14,
+            ),
+            ElementGroup(
+              elements: group16,
+            ),
+            ElementGroup(
+              elements: group17,
+            ),
+            ElementGroup(
+              elements: group18,
             ),
           ],
         ),

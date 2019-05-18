@@ -130,7 +130,7 @@ class Details extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         elementDetails.melting.toString(),
-                        style: TextStyle(fontSize: 35),
+                        style: TextStyle(fontSize: 30),
                       ),
                       Text(
                         "Melting\nPoint (K)",
@@ -147,7 +147,7 @@ class Details extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         elementDetails.boiling.toString(),
-                        style: TextStyle(fontSize: 35),
+                        style: TextStyle(fontSize: 30),
                       ),
                       Text(
                         "Boiling\nPoint (K)",
@@ -164,7 +164,7 @@ class Details extends StatelessWidget {
                     children: <Widget>[
                       Text(
                         elementDetails.energy.toString(),
-                        style: TextStyle(fontSize: 35),
+                        style: TextStyle(fontSize: 30),
                       ),
                       Text(
                         "Ionization Energy\n(kJ per mol)",
@@ -177,7 +177,7 @@ class Details extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.15,
+              height: MediaQuery.of(context).size.height * 0.10,
             ),
             Container(
               child: Center(
