@@ -1,16 +1,27 @@
-# periodic_table
+# Offline Periodic Table
 
-A new Flutter project.
+An offline version of the periodic table, made with Flutter.
 
-## Getting Started
+## Current Features
+[✓] Beautiful animation between pages
 
-This project is a starting point for a Flutter application.
+[✓] Information about each element
 
-A few resources to get you started if this is your first Flutter project:
+[✓] 18 names groups
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+[✓] Homepage
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+[✓] Element details page
+
+[✓] Well-designed UI
+
+
+## TODO List
+
+᛫ Add remaning elements to the dataset (Transition metals remaining)
+
+
+# Screenshots
+
+
+<img src="/Periodic_table_1.jpg" width="250"> <img src="Periodic_table_2.jpg" width="250">
